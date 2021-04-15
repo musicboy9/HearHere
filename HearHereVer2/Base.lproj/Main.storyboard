@@ -1,26 +1,147 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="HearHereVer2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-9w-exF">
+                                <rect key="frame" x="16" y="0.0" width="343" height="627"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="recordButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="fjM-rW-P6k"/>
+                                    <action selector="recordButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Fo-t1-fCR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0V2-9w-exF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9oW-JB-rz7"/>
+                            <constraint firstItem="0V2-9w-exF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cda-oH-w9x"/>
+                            <constraint firstItem="0V2-9w-exF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EIv-0C-nLK"/>
+                            <constraint firstAttribute="bottom" secondItem="0V2-9w-exF" secondAttribute="bottom" constant="20" symbolic="YES" id="Xv8-AM-IXE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="voiceSearchButton" destination="0V2-9w-exF" id="bYB-b2-cKU"/>
+                        <segue destination="Bsw-Jv-yL8" kind="show" identifier="searchEnd" id="bfE-SL-ZLN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="136.28185907046478"/>
+        </scene>
+        <!--Search Result Table View Controller-->
+        <scene sceneID="6l1-Wk-BY1">
+            <objects>
+                <tableViewController id="Bsw-Jv-yL8" customClass="SearchResultTableViewController" customModule="HearHereVer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="y5s-HU-Zcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResult" id="3BD-2M-WRI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3BD-2M-WRI" id="vgP-Ym-NhS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Bsw-Jv-yL8" id="BjX-3T-7AR"/>
+                            <outlet property="delegate" destination="Bsw-Jv-yL8" id="NGB-D0-RoE"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="searchAgain" id="j5A-in-WVD"/>
+                        <segue destination="7MR-fB-R50" kind="show" identifier="bluetoothConnecting" id="sqO-4D-YAG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARQ-by-S4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="136"/>
+        </scene>
+        <!--Bluetooth Connection View Controller-->
+        <scene sceneID="X0p-Er-Gca">
+            <objects>
+                <viewController id="7MR-fB-R50" customClass="BluetoothConnectionViewController" customModule="HearHereVer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zGW-FV-94C"/>
+                        <viewControllerLayoutGuide type="bottom" id="uwe-ge-S1u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ENh-W0-tO2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNI-cD-X1W">
+                                <rect key="frame" x="16" y="0.0" width="343" height="627"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTouched:" destination="7MR-fB-R50" eventType="touchUpInside" id="dhR-9e-KjS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iNI-cD-X1W" firstAttribute="leading" secondItem="ENh-W0-tO2" secondAttribute="leadingMargin" id="IKu-va-hUs"/>
+                            <constraint firstAttribute="bottom" secondItem="iNI-cD-X1W" secondAttribute="bottom" constant="20" symbolic="YES" id="WxI-uA-PJ6"/>
+                            <constraint firstItem="iNI-cD-X1W" firstAttribute="top" secondItem="zGW-FV-94C" secondAttribute="bottom" id="XaN-8b-5T1"/>
+                            <constraint firstItem="iNI-cD-X1W" firstAttribute="trailing" secondItem="ENh-W0-tO2" secondAttribute="trailingMargin" id="kxM-RM-aQO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingButton" destination="iNI-cD-X1W" id="3tc-gA-08E"/>
+                        <segue destination="8vr-dT-MU8" kind="show" identifier="bluetoothConnected" id="I2K-xt-Ngx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqn-kn-6tP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.5999999999999" y="135.38230884557723"/>
+        </scene>
+        <!--Navigation Table View Controller-->
+        <scene sceneID="Z6a-L4-TTt">
+            <objects>
+                <tableViewController id="8vr-dT-MU8" customClass="NavigationTableViewController" customModule="HearHereVer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sZG-Yu-Wtu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="navigationCell" id="FEE-VT-ukQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FEE-VT-ukQ" id="ulR-HY-ggL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8vr-dT-MU8" id="sAh-MX-heH"/>
+                            <outlet property="delegate" destination="8vr-dT-MU8" id="inC-bT-Fi5"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USi-I6-3Jr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205" y="136"/>
         </scene>
     </scenes>
 </document>

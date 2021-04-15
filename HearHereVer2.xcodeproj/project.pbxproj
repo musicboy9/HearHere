@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71088411D51C48D0053F5C4 /* deviceConnected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D71088401D51C48D0053F5C4 /* deviceConnected.mp3 */; };
+		D71088431D51CC110053F5C4 /* RouteCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71088421D51CC110053F5C4 /* RouteCreator.swift */; };
+		D71088451D52024B0053F5C4 /* AudioSamplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71088441D52024B0053F5C4 /* AudioSamplePlayer.swift */; };
+		D71088471D52033D0053F5C4 /* MyOpenALSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71088461D52033D0053F5C4 /* MyOpenALSupport.swift */; };
 		D726AE2B1D40B66F0018F147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AE2A1D40B66F0018F147 /* AppDelegate.swift */; };
-		D726AE2D1D40B66F0018F147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AE2C1D40B66F0018F147 /* ViewController.swift */; };
+		D726AE2D1D40B66F0018F147 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AE2C1D40B66F0018F147 /* SearchViewController.swift */; };
 		D726AE301D40B66F0018F147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D726AE2E1D40B66F0018F147 /* Main.storyboard */; };
 		D726AE321D40B66F0018F147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D726AE311D40B66F0018F147 /* Assets.xcassets */; };
 		D726AE351D40B66F0018F147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D726AE331D40B66F0018F147 /* LaunchScreen.storyboard */; };
 		D726AE401D40B66F0018F147 /* HearHereVer2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AE3F1D40B66F0018F147 /* HearHereVer2Tests.swift */; };
 		D726AE4B1D40B66F0018F147 /* HearHereVer2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AE4A1D40B66F0018F147 /* HearHereVer2UITests.swift */; };
+		D738B4591D41BBD800DF9769 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D738B4581D41BBD800DF9769 /* Speech.framework */; };
+		D738B45B1D426E2E00DF9769 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D738B45A1D426E2E00DF9769 /* MapKit.framework */; };
+		D738B45D1D426E3800DF9769 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D738B45C1D426E3800DF9769 /* CoreLocation.framework */; };
+		D738B4631D42F70700DF9769 /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738B4621D42F70700DF9769 /* MapSearch.swift */; };
+		D74AB07A1D518A060052F1A2 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74AB0791D518A060052F1A2 /* OpenAL.framework */; };
+		D7591B291D461AF7007C5593 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7591B281D461AF7007C5593 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		D7591B2B1D4623A7007C5593 /* beepAlert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D7591B2A1D4623A7007C5593 /* beepAlert.mp3 */; };
+		D79771C51D50AE7A00C71D8B /* BluetoothPeripheralSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79771C41D50AE7A00C71D8B /* BluetoothPeripheralSearcher.swift */; };
+		D79771C71D50FA6400C71D8B /* BluetoothConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79771C61D50FA6400C71D8B /* BluetoothConnectionViewController.swift */; };
+		D7A312B41D4FA5D300F75E87 /* DZBluetoothSerialHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A312B31D4FA5D300F75E87 /* DZBluetoothSerialHandler.swift */; };
+		D7F196681D4E396F00E1A78D /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F196671D4E396F00E1A78D /* SearchResultTableViewController.swift */; };
+		D7F1966C1D4F540F00E1A78D /* NavigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1966B1D4F540F00E1A78D /* NavigationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D710883D1D51C0820053F5C4 /* navigationTone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = navigationTone.caf; sourceTree = "<group>"; };
+		D710883E1D51C1B60053F5C4 /* checkpointArrival.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = checkpointArrival.caf; sourceTree = "<group>"; };
+		D71088401D51C48D0053F5C4 /* deviceConnected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deviceConnected.mp3; sourceTree = "<group>"; };
+		D71088421D51CC110053F5C4 /* RouteCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreator.swift; sourceTree = "<group>"; };
+		D71088441D52024B0053F5C4 /* AudioSamplePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSamplePlayer.swift; sourceTree = "<group>"; };
+		D71088461D52033D0053F5C4 /* MyOpenALSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOpenALSupport.swift; sourceTree = "<group>"; };
 		D726AE271D40B66F0018F147 /* HearHereVer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HearHereVer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D726AE2A1D40B66F0018F147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D726AE2C1D40B66F0018F147 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D726AE2C1D40B66F0018F147 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D726AE2F1D40B66F0018F147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D726AE311D40B66F0018F147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D726AE341D40B66F0018F147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +69,19 @@
 		D726AE461D40B66F0018F147 /* HearHereVer2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearHereVer2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D726AE4A1D40B66F0018F147 /* HearHereVer2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHereVer2UITests.swift; sourceTree = "<group>"; };
 		D726AE4C1D40B66F0018F147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D738B4561D41B4F400DF9769 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = "../../../../../Downloads/speechkit-iOS-2/SpeechKit.framework"; sourceTree = "<group>"; };
+		D738B4581D41BBD800DF9769 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		D738B45A1D426E2E00DF9769 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D738B45C1D426E3800DF9769 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D738B4621D42F70700DF9769 /* MapSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
+		D74AB0791D518A060052F1A2 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		D7591B281D461AF7007C5593 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D7591B2A1D4623A7007C5593 /* beepAlert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beepAlert.mp3; sourceTree = "<group>"; };
+		D79771C41D50AE7A00C71D8B /* BluetoothPeripheralSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralSearcher.swift; sourceTree = "<group>"; };
+		D79771C61D50FA6400C71D8B /* BluetoothConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnectionViewController.swift; sourceTree = "<group>"; };
+		D7A312B31D4FA5D300F75E87 /* DZBluetoothSerialHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZBluetoothSerialHandler.swift; sourceTree = "<group>"; };
+		D7F196671D4E396F00E1A78D /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
+		D7F1966B1D4F540F00E1A78D /* NavigationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74AB07A1D518A060052F1A2 /* OpenAL.framework in Frameworks */,
+				D7591B291D461AF7007C5593 /* AVFoundation.framework in Frameworks */,
+				D738B45D1D426E3800DF9769 /* CoreLocation.framework in Frameworks */,
+				D738B45B1D426E2E00DF9769 /* MapKit.framework in Frameworks */,
+				D738B4591D41BBD800DF9769 /* Speech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +121,7 @@
 				D726AE3E1D40B66F0018F147 /* HearHereVer2Tests */,
 				D726AE491D40B66F0018F147 /* HearHereVer2UITests */,
 				D726AE281D40B66F0018F147 /* Products */,
+				D738B4551D41B4F400DF9769 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +138,21 @@
 		D726AE291D40B66F0018F147 /* HearHereVer2 */ = {
 			isa = PBXGroup;
 			children = (
+				D7591B2A1D4623A7007C5593 /* beepAlert.mp3 */,
+				D71088401D51C48D0053F5C4 /* deviceConnected.mp3 */,
+				D710883D1D51C0820053F5C4 /* navigationTone.caf */,
+				D710883E1D51C1B60053F5C4 /* checkpointArrival.caf */,
 				D726AE2A1D40B66F0018F147 /* AppDelegate.swift */,
-				D726AE2C1D40B66F0018F147 /* ViewController.swift */,
+				D7A312B31D4FA5D300F75E87 /* DZBluetoothSerialHandler.swift */,
+				D726AE2C1D40B66F0018F147 /* SearchViewController.swift */,
+				D738B4621D42F70700DF9769 /* MapSearch.swift */,
+				D71088421D51CC110053F5C4 /* RouteCreator.swift */,
+				D79771C61D50FA6400C71D8B /* BluetoothConnectionViewController.swift */,
+				D7F196671D4E396F00E1A78D /* SearchResultTableViewController.swift */,
+				D79771C41D50AE7A00C71D8B /* BluetoothPeripheralSearcher.swift */,
+				D7F1966B1D4F540F00E1A78D /* NavigationTableViewController.swift */,
+				D71088441D52024B0053F5C4 /* AudioSamplePlayer.swift */,
+				D71088461D52033D0053F5C4 /* MyOpenALSupport.swift */,
 				D726AE2E1D40B66F0018F147 /* Main.storyboard */,
 				D726AE311D40B66F0018F147 /* Assets.xcassets */,
 				D726AE331D40B66F0018F147 /* LaunchScreen.storyboard */,
@@ -123,6 +177,19 @@
 				D726AE4C1D40B66F0018F147 /* Info.plist */,
 			);
 			path = HearHereVer2UITests;
+			sourceTree = "<group>";
+		};
+		D738B4551D41B4F400DF9769 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D74AB0791D518A060052F1A2 /* OpenAL.framework */,
+				D7591B281D461AF7007C5593 /* AVFoundation.framework */,
+				D738B45C1D426E3800DF9769 /* CoreLocation.framework */,
+				D738B45A1D426E2E00DF9769 /* MapKit.framework */,
+				D738B4581D41BBD800DF9769 /* Speech.framework */,
+				D738B4561D41B4F400DF9769 /* SpeechKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +307,8 @@
 			files = (
 				D726AE351D40B66F0018F147 /* LaunchScreen.storyboard in Resources */,
 				D726AE321D40B66F0018F147 /* Assets.xcassets in Resources */,
+				D7591B2B1D4623A7007C5593 /* beepAlert.mp3 in Resources */,
+				D71088411D51C48D0053F5C4 /* deviceConnected.mp3 in Resources */,
 				D726AE301D40B66F0018F147 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,8 +334,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D726AE2D1D40B66F0018F147 /* ViewController.swift in Sources */,
+				D7A312B41D4FA5D300F75E87 /* DZBluetoothSerialHandler.swift in Sources */,
+				D79771C51D50AE7A00C71D8B /* BluetoothPeripheralSearcher.swift in Sources */,
+				D7F196681D4E396F00E1A78D /* SearchResultTableViewController.swift in Sources */,
+				D738B4631D42F70700DF9769 /* MapSearch.swift in Sources */,
+				D71088431D51CC110053F5C4 /* RouteCreator.swift in Sources */,
+				D7F1966C1D4F540F00E1A78D /* NavigationTableViewController.swift in Sources */,
+				D726AE2D1D40B66F0018F147 /* SearchViewController.swift in Sources */,
+				D71088451D52024B0053F5C4 /* AudioSamplePlayer.swift in Sources */,
 				D726AE2B1D40B66F0018F147 /* AppDelegate.swift in Sources */,
+				D71088471D52033D0053F5C4 /* MyOpenALSupport.swift in Sources */,
+				D79771C71D50FA6400C71D8B /* BluetoothConnectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +581,7 @@
 				D726AE511D40B66F0018F147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D726AE521D40B66F0018F147 /* Build configuration list for PBXNativeTarget "HearHereVer2Tests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +590,7 @@
 				D726AE541D40B66F0018F147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D726AE551D40B66F0018F147 /* Build configuration list for PBXNativeTarget "HearHereVer2UITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +599,7 @@
 				D726AE571D40B66F0018F147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
