@@ -1,5 +1,5 @@
-/HearHereVer2Tests
-/HearHereVer2UITests
-/Products
-/Frameworks
-/.idea
+HearHereVer2Tests/
+HearHereVer2UITests/
+Products/
+Frameworks/
+.idea/
